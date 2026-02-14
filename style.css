@@ -1,0 +1,218 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: Arial; 
+	margin: 0;
+}
+.header {
+	padding: 60px;
+	text-align: center;
+	background: #7d97ad;
+	color: white; 
+}
+.navbar {
+	display: flex;
+	background-color: #333;
+}
+.navbar a {
+	color: white;
+	padding: 14px 20px;
+	text-decoration: none;
+	text-align: center;
+}
+.navbar a:hober{
+	background-color: #ddd;
+	flex-wrap: wrap;
+}
+.row {
+	display: flex;
+	background-color: #f1f1f1;
+	padding: 20px 
+}
+.side{
+	flex: 70%;
+	background-color: white;
+	padding: 20px;
+}
+.main {
+	flex: 70%;
+	background-color: white;
+	padding: 20%;
+}
+.fakeimg {
+	background-color: #aaa;
+	width: 100%;
+	padding: 20px;
+}
+.fakeimg {
+	background-color: #aaa;
+	width: 100%;
+	padding: 20px;
+}
+.footer {
+	padding: 20px;
+	text-align: center;
+	background: #ddd;
+}
+@media screen and (max-width: 700px){
+	.row, .navbar {
+		flex-direction: column;
+	}
+}
+.dropbtn {
+	background-color: #2f2f2f;
+	color: white;
+	padding: 16px;
+	font-size: 16px
+	border: none;
+	cursor: pointer;
+}
+.dropdown {
+	position: relative;
+	display: inline-block;
+	margin: 5px;
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown:hover .dropdown-content{
+	display: block;
+}
+.dropdown:hover .dropbth{
+	background-color: #d47676;
+}
+.ab{
+	transition:width 2s;
+
+}
+.ab:hover{
+	width: 300px;
+
+}
+.cd{
+	transition: width 2s, height 2s linear 0.5s;
+}
+.cd:hover{
+	width:  300px;
+	height: 300px;
+}
+.ef:hover{
+	width: 300px;
+	transition: width 2s ease-in-out 0.5s ;
+}
+
+
+.ef {
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 5px 5px 0 #ff005e, 10px 10px 0 #00d4ff;
+    animation: shadow-dance 2s infinite;
+}
+
+@keyframes shadow-dance {
+    0%, 100% {
+        text-shadow: 5px 5px 0 #ff005e, 10px 10px 0 #00d4ff;
+    }
+    50% {
+        text-shadow: -5px -5px 0 #00d4ff, -10px -10px 0 #ff005e;
+    }
+}
+
+
+.ab {
+    position: relative;
+    overflow: hidden;
+}
+
+.ab {
+    font-size: 6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    position: relative;
+    animation: melt 3s infinite ease-in-out;
+    background: linear-gradient(90deg, #ff6f61, #ffbd44, #ff6f61);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.ab::before,
+.ab::after {
+    content: '1';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #ff6f61, #ffbd44, #ff6f61);
+    -webkit-background-clip: text;
+    color: transparent;
+    z-index: -1;
+    transform: scaleY(1);
+    opacity: 0.5;
+    animation: drip 3s infinite ease-in-out;
+}
+
+.ab::after {
+    filter: blur(10px);
+    opacity: 0.3;
+}
+
+/* Keyframes for melting effect */
+@keyframes melt {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+@keyframes drip {
+    0%, 100% {
+        transform: scaleY(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scaleY(1.5);
+        opacity: 0.7;
+    }
+}
+
+.cd {
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 
+        1px 1px 0px #e63946, 
+        2px 2px 0px #f77f00, 
+        3px 3px 0px #fcbf49, 
+        4px 4px 0px #a8dadc, 
+        5px 5px 0px #457b9d;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    animation: spin-3d 4s infinite linear;
+}
+
+@keyframes spin-3d {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
